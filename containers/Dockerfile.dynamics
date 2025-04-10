@@ -1,0 +1,151 @@
+# Molecular dynamics Docker image for in silico vaccine design pipeline
+FROM username/vaccine-design-base:latest
+
+LABEL maintainer="Your Name <your.email@example.com>"
+LABEL description="Molecular dynamics tools for in silico vaccine design pipeline"
+LABEL version="1.0.0"
+
+# Install additional Python packages for structural analysis
+RUN pip3 install --no-cache-dir \
+    mdtraj==1.9.7 \
+    pymol-open-source==2.5.0 \
+    biotite==0.34.0 \
+    prody==2.2.0
+
+# Install additional system dependencies for molecular dynamics
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    cmake \
+    gfortran \
+    libfftw3-dev \
+    liblapack-dev \
+    libopenmpi-dev \
+    openmpi-bin \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create directories for MD tools
+RUN mkdir -p /opt/md/bin /opt/md/data
+
+# In a real implementation, you would install actual molecular dynamics software here
+# For example, GROMACS. This is a placeholder for demonstration purposes.
+
+# Create a simplified structure prediction script
+RUN echo '#!/usr/bin/env python3\n\
+import sys\n\
+import os\n\
+import numpy as np\n\
+from Bio import SeqIO\n\
+from Bio.PDB import PDBIO, Structure, Model, Chain, Residue, Atom\n\
+\n\
+def create_dummy_structure(sequence, output_pdb):\n\
+    """Create a dummy alpha-helix structure for demonstration"""\n\
+    # Create a simple structure\n\
+    structure = Structure.Structure("vaccine")\n\
+    model = Model.Model(0)\n\
+    chain = Chain.Chain("A")\n\
+    structure.add(model)\n\
+    model.add(chain)\n\
+    \n\
+    # Add residues in a simple linear arrangement\n\
+    for i, aa in enumerate(sequence):\n\
+        res = Residue.Residue((" ", i, " "), aa, " ")\n\
+        # Add dummy atoms (just CA for simplicity)\n\
+        atom = Atom.Atom("CA", (i*3.8, 0, 0), 0, 1, " ", "CA", i, "C")\n\
+        res.add(atom)\n\
+        chain.add(res)\n\
+    \n\
+    # Save to PDB\n\
+    io = PDBIO()\n\
+    io.set_structure(structure)\n\
+    io.save(output_pdb)\n\
+    print(f"Created dummy structure with {len(sequence)} residues")\n\
+\n\
+if __name__ == "__main__":\n\
+    if len(sys.argv) < 3:\n\
+        print("Usage: predict_structure.py <fasta_file> <output_pdb>")\n\
+        sys.exit(1)\n\
+    \n\
+    fasta_file = sys.argv[1]\n\
+    output_pdb = sys.argv[2]\n\
+    \n\
+    # Read sequence\n\
+    record = next(SeqIO.parse(fasta_file, "fasta"))\n\
+    sequence = str(record.seq)\n\
+    \n\
+    # Create structure\n\
+    create_dummy_structure(sequence, output_pdb)\n\
+' > /opt/md/bin/predict_structure.py \
+    && chmod +x /opt/md/bin/predict_structure.py
+
+# Create a simplified molecular dynamics simulation script
+RUN echo '#!/usr/bin/env python3\n\
+import sys\n\
+import os\n\
+import numpy as np\n\
+import matplotlib.pyplot as plt\n\
+\n\
+def simulate_md(pdb_file, output_dir, time_ns=10):\n\
+    """Create simulated MD trajectory data for demonstration"""\n\
+    # Create output directory\n\
+    os.makedirs(output_dir, exist_ok=True)\n\
+    \n\
+    # Generate time points\n\
+    time_points = np.linspace(0, time_ns, 100)\n\
+    \n\
+    # Generate simulated RMSD data\n\
+    rmsd = 0.1 * (1 - np.exp(-time_points/2)) + 0.05 * np.random.normal(size=len(time_points))\n\
+    \n\
+    # Generate simulated Rg data\n\
+    rg = 2.0 + 0.1 * np.random.normal(size=len(time_points))\n\
+    \n\
+    # Save data\n\
+    np.savetxt(f"{output_dir}/rmsd.dat", np.column_stack((time_points, rmsd)))\n\
+    np.savetxt(f"{output_dir}/rg.dat", np.column_stack((time_points, rg)))\n\
+    \n\
+    # Create summary\n\
+    with open(f"{output_dir}/md_summary.txt", "w") as f:\n\
+        f.write(f"Simulated MD of {pdb_file} for {time_ns} ns\\n")\n\
+        f.write(f"Average RMSD: {np.mean(rmsd):.3f} nm\\n")\n\
+        f.write(f"Average Rg: {np.mean(rg):.3f} nm\\n")\n\
+    \n\
+    # Create plots\n\
+    plt.figure(figsize=(10, 6))\n\
+    plt.plot(time_points, rmsd)\n\
+    plt.xlabel("Time (ns)")\n\
+    plt.ylabel("RMSD (nm)")\n\
+    plt.title("RMSD during MD simulation")\n\
+    plt.savefig(f"{output_dir}/rmsd.png")\n\
+    plt.close()\n\
+    \n\
+    plt.figure(figsize=(10, 6))\n\
+    plt.plot(time_points, rg)\n\
+    plt.xlabel("Time (ns)")\n\
+    plt.ylabel("Radius of Gyration (nm)")\n\
+    plt.title("Radius of Gyration during MD simulation")\n\
+    plt.savefig(f"{output_dir}/rg.png")\n\
+    plt.close()\n\
+    \n\
+    print(f"MD simulation completed. Results in {output_dir}")\n\
+\n\
+if __name__ == "__main__":\n\
+    if len(sys.argv) < 3:\n\
+        print("Usage: run_md.py <pdb_file> <output_dir> [time_ns]")\n\
+        sys.exit(1)\n\
+    \n\
+    pdb_file = sys.argv[1]\n\
+    output_dir = sys.argv[2]\n\
+    time_ns = float(sys.argv[3]) if len(sys.argv) > 3 else 10.0\n\
+    \n\
+    # Run simulation\n\
+    simulate_md(pdb_file, output_dir, time_ns)\n\
+' > /opt/md/bin/run_md.py \
+    && chmod +x /opt/md/bin/run_md.py
+
+# Add MD tools to PATH
+ENV PATH="/opt/md/bin:${PATH}"
+
+# Working directory
+WORKDIR /work
+
+# Default command
+CMD ["/bin/bash"]
