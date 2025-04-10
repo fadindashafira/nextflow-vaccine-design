@@ -1,0 +1,50 @@
+digraph "pipeline_dag" {
+v0 [shape=point,label="",fixedsize=true,width=0.1];
+v1 [label="retrieveSequence"];
+v0 -> v1 [label="accession"];
+
+v1 [label="retrieveSequence"];
+v2 [label="predictBCellEpitopes"];
+v1 -> v2;
+
+v2 [label="predictBCellEpitopes"];
+v5 [label="combineEpitopes"];
+v2 -> v5;
+
+v1 [label="retrieveSequence"];
+v3 [label="predictTCellEpitopesI"];
+v1 -> v3 [label="fasta"];
+
+v3 [label="predictTCellEpitopesI"];
+v5 [label="combineEpitopes"];
+v3 -> v5;
+
+v1 [label="retrieveSequence"];
+v4 [label="predictTCellEpitopesII"];
+v1 -> v4 [label="fasta"];
+
+v4 [label="predictTCellEpitopesII"];
+v5 [label="combineEpitopes"];
+v4 -> v5;
+
+v5 [label="combineEpitopes"];
+v6 [label="designVaccineConstruct"];
+v5 -> v6;
+
+v6 [label="designVaccineConstruct"];
+v8 [label="evaluateVaccineConstruct"];
+v6 -> v8;
+
+v6 [label="designVaccineConstruct"];
+v7 [shape=point];
+v6 -> v7;
+
+v8 [label="evaluateVaccineConstruct"];
+v10 [shape=point];
+v8 -> v10;
+
+v8 [label="evaluateVaccineConstruct"];
+v9 [shape=point];
+v8 -> v9;
+
+}

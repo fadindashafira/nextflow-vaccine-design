@@ -1,0 +1,46 @@
+# Default parameters for in-silico vaccine design pipeline
+
+# Input parameters
+accession: "BAL61222.1"   # Default protein accession number from NCBI
+outdir: "results"         # Output directory
+
+# Execution options
+run_md: false             # Whether to run molecular dynamics simulation
+max_memory: '64.GB'       # Maximum memory
+max_cpus: 16              # Maximum CPUs
+max_time: '48.h'          # Maximum time
+
+# B-cell epitope prediction parameters
+bcell_method: "Bepipred"  # Prediction method for B-cell epitopes
+bcell_threshold: 0.9      # Score threshold for B-cell epitopes
+
+# T-cell epitope prediction parameters (MHC-I)
+mhci_method: "NetMHCpan"  # Prediction method for MHC-I binding
+mhci_threshold: 500       # IC50 threshold for MHC-I binding (nM)
+mhci_alleles: [           # HLA alleles for MHC-I prediction
+  "HLA-A*02:01",
+  "HLA-B*07:02",
+  "HLA-B*35:01",
+  "HLA-B*14:02",
+  "HLA-A*11:01"
+]
+
+# T-cell epitope prediction parameters (MHC-II)
+mhcii_method: "NetMHCIIpan"  # Prediction method for MHC-II binding
+mhcii_threshold: 500          # IC50 threshold for MHC-II binding (nM)
+mhcii_alleles: [              # HLA alleles for MHC-II prediction
+  "HLA-DRB1*01:01",
+  "HLA-DRB1*03:01",
+  "HLA-DRB1*04:05",
+  "HLA-DRB1*07:01",
+  "HLA-DRB1*13:02"
+]
+
+# Vaccine design parameters
+linkers: ["GPGPG", "AAY", "KK"]  # Peptide linkers for vaccine construct
+t_helper: "AKFVAAWTLKAAA"        # Universal T-helper epitope
+
+# Molecular dynamics parameters
+md_temperature: 310             # Simulation temperature (K)
+md_time: 10                     # Simulation time (ns)
+md_forcefield: "AMBER ff14SB"   # Force field for simulation
