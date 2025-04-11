@@ -1,0 +1,16 @@
+"sequence","start","end","score","type","method","source","hla","ic50","consensus_score"
+"KANPNNDLC",98,106,0.998,"B-cell","Bepipred","BAL61222.1_sequence",NA,NA,0.998
+"SWSDHEASS",137,145,0.997,"B-cell","Bepipred","BAL61222.1_sequence",NA,NA,0.997
+"CPYLGSPSF",151,159,0.95,"MHC-I","NetMHCpan","BAL61222.1_sequence","HLA-B*07:02",15,0.997
+"IGTSTLNQR",216,224,0.92,"MHC-II","NetMHCIIpan","BAL61222.1_sequence","HLA-DRB1*03:01",18,0.9964
+"NNTNQEDLL",181,189,0.996,"B-cell","Bepipred","BAL61222.1_sequence",NA,NA,0.996
+"KCQTPMGAI",293,301,0.9,"MHC-I","NetMHCpan","BAL61222.1_sequence","HLA-B*07:02",23,0.9954
+"MVSLVKSDQ",10,18,0.88,"MHC-II","NetMHCIIpan","BAL61222.1_sequence","HLA-DRB1*03:01",32,0.9936
+"MEKIVLLLA",1,9,0.85,"MHC-I","NetMHCpan","BAL61222.1_sequence","HLA-B*61:01",42,0.9916
+"QRESRRKKR",338,346,0.985,"B-cell","Bepipred","BAL61222.1_sequence",NA,NA,0.985
+"IGTSTLNQR",216,224,0.984,"B-cell","Bepipred","BAL61222.1_sequence",NA,NA,0.984
+"EKIVLLLAM",2,10,0.82,"MHC-I","NetMHCpan","BAL61222.1_sequence","HLA-B*14:02",85,0.983
+"GNCNTKCQT",288,296,0.979,"B-cell","Bepipred","BAL61222.1_sequence",NA,NA,0.979
+"KAVDGVTNK",389,397,0.78,"MHC-I","NetMHCpan","BAL61222.1_sequence","HLA-A*11:01",120,0.976
+"YNGIITDTI",188,196,0.75,"MHC-II","NetMHCIIpan","BAL61222.1_sequence","HLA-DRB1*01:01",150,0.97
+"MVSLVKSDQ",10,18,0.964,"B-cell","Bepipred","BAL61222.1_sequence",NA,NA,0.964

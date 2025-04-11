@@ -1,0 +1,50 @@
+Vaccine Construct Evaluation
+============================
+
+Sequence Length: 135 amino acids
+Molecular Weight: 15768.93 Da
+Theoretical pI: 8.50
+Instability Index: 35.20 (<40 suggests a stable protein)
+Number of Epitopes: 10
+Allergenicity Score: 0.1500 (<0.3 suggests low allergenicity)
+
+Amino Acid Composition:
+  A: 4 (2.96%)
+  C: 3 (2.22%)
+  D: 4 (2.96%)
+  E: 4 (2.96%)
+  F: 1 (0.74%)
+  G: 31 (22.96%)
+  H: 1 (0.74%)
+  I: 4 (2.96%)
+  K: 6 (4.44%)
+  L: 10 (7.41%)
+  M: 3 (2.22%)
+  N: 8 (5.93%)
+  P: 22 (16.30%)
+  Q: 6 (4.44%)
+  R: 6 (4.44%)
+  S: 11 (8.15%)
+  T: 6 (4.44%)
+  V: 3 (2.22%)
+  W: 1 (0.74%)
+  Y: 1 (0.74%)
+
+Predicted Antigenic Regions:
+  Region 15-25: Score 0.95
+  Region 45-65: Score 0.91
+  Region 80-95: Score 0.88
+
+Sequence:
+KANPNNDLCGPGPGSWSDHEASSGPGPGCPYLGSPSFGPGPGIGTSTLNQRGPGPGNNTN
+QEDLLGPGPGKCQTPMGAIGPGPGMVSLVKSDQGPGPGMEKIVLLLAGPGPGQRESRRKK
+RGPGPGIGTSTLNQR
+
+
+Notes:
+- This evaluation provides a basic assessment of the vaccine construct properties.
+- For a comprehensive evaluation, additional analyses should be performed:
+  1. Structural modeling and refinement
+  2. Molecular dynamics simulations for stability assessment
+  3. Binding affinity calculations with target HLA molecules
+  4. Experimental validation of immunogenicity

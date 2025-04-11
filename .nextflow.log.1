@@ -1,0 +1,137 @@
+Apr-10 22:47:45.864 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+Apr-10 22:47:45.904 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.4
+Apr-10 22:47:45.915 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/putriramadani/.nextflow/plugins; core-plugins: nf-amazon@2.9.2,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.3,nf-tower@1.9.3,nf-wave@1.7.4
+Apr-10 22:47:45.931 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-10 22:47:45.932 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-10 22:47:45.933 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Apr-10 22:47:45.938 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-10 22:47:45.949 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/nextflow.config
+Apr-10 22:47:45.950 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/nextflow.config
+Apr-10 22:47:45.962 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/putriramadani/.nextflow/secrets/store.json
+Apr-10 22:47:45.963 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@c9d82f9] - activable => nextflow.secret.LocalSecretsProvider@c9d82f9
+Apr-10 22:47:45.969 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Apr-10 22:47:46.336 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Apr-10 22:47:46.341 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [special_booth] DSL2 - revision: d0a4937630
+Apr-10 22:47:46.342 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Apr-10 22:47:46.342 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Apr-10 22:47:46.367 [main] DEBUG nextflow.Session - Session UUID: 70cda86f-7c11-4801-8bbc-fb8dc630a025
+Apr-10 22:47:46.367 [main] DEBUG nextflow.Session - Run name: special_booth
+Apr-10 22:47:46.367 [main] DEBUG nextflow.Session - Executor pool size: 8
+Apr-10 22:47:46.371 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Apr-10 22:47:46.373 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Apr-10 22:47:46.387 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.10.4 build 5934
+  Created: 20-01-2025 16:47 UTC (11:47 EDT)
+  System: Mac OS X 14.5
+  Runtime: Groovy 4.0.23 on Java HotSpot(TM) 64-Bit Server VM 23.0.1+11-39
+  Encoding: UTF-8 (UTF-8)
+  Process: 6476@putri-ramadani.local [127.0.0.1]
+  CPUs: 8 - Mem: 16 GB (48.9 MB) - Swap: 0 (0)
+Apr-10 22:47:46.393 [main] DEBUG nextflow.Session - Work-dir: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/work [Mac OS X]
+Apr-10 22:47:46.401 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Apr-10 22:47:46.405 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Apr-10 22:47:46.419 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Apr-10 22:47:46.423 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Apr-10 22:47:46.444 [main] DEBUG nextflow.Session - Session start
+Apr-10 22:47:46.537 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Apr-10 22:47:46.723 [main] INFO  nextflow.Nextflow - 
+=============================================
+ IN SILICO VACCINE DESIGN PIPELINE
+=============================================
+ Accession: BAL61222.1
+ Output directory: results
+ Run molecular dynamics: false
+
+Apr-10 22:47:46.752 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:retrieveSequence` matches process retrieveSequence
+Apr-10 22:47:46.760 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Apr-10 22:47:46.761 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-10 22:47:46.763 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Apr-10 22:47:46.766 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=8 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Apr-10 22:47:46.767 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Apr-10 22:47:46.796 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:predictBCellEpitopes|predictTCellEpitopesI|predictTCellEpitopesII` matches process predictBCellEpitopes
+Apr-10 22:47:46.796 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:predict.*` matches process predictBCellEpitopes
+Apr-10 22:47:46.797 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Apr-10 22:47:46.797 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-10 22:47:46.799 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:predictBCellEpitopes|predictTCellEpitopesI|predictTCellEpitopesII` matches process predictTCellEpitopesI
+Apr-10 22:47:46.799 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:predict.*` matches process predictTCellEpitopesI
+Apr-10 22:47:46.800 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Apr-10 22:47:46.800 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-10 22:47:46.802 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:predictBCellEpitopes|predictTCellEpitopesI|predictTCellEpitopesII` matches process predictTCellEpitopesII
+Apr-10 22:47:46.802 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:predict.*` matches process predictTCellEpitopesII
+Apr-10 22:47:46.802 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Apr-10 22:47:46.802 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-10 22:47:46.805 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Apr-10 22:47:46.805 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-10 22:47:46.806 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Apr-10 22:47:46.807 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-10 22:47:46.809 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Apr-10 22:47:46.809 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-10 22:47:46.810 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: predictTCellEpitopesI, retrieveSequence, designVaccineConstruct, evaluateVaccineConstruct, predictBCellEpitopes, combineEpitopes, molecularDynamics, predictTCellEpitopesII
+Apr-10 22:47:46.810 [main] DEBUG nextflow.Session - Igniting dataflow network (7)
+Apr-10 22:47:46.811 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > retrieveSequence
+Apr-10 22:47:46.811 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > predictBCellEpitopes
+Apr-10 22:47:46.811 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > predictTCellEpitopesI
+Apr-10 22:47:46.811 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > predictTCellEpitopesII
+Apr-10 22:47:46.811 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combineEpitopes
+Apr-10 22:47:46.811 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > designVaccineConstruct
+Apr-10 22:47:46.811 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > evaluateVaccineConstruct
+Apr-10 22:47:46.812 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_90d8fa730bb038f9: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/./modules/predictEpitopes.nf
+  Script_afb0778da89d9b9e: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/./modules/molecularDynamics.nf
+  Script_74fcf2e011d31b50: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/./modules/evaluateVaccine.nf
+  Script_b5b079aa16ce7283: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/main.nf
+  Script_0e62da95d09a983b: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/./modules/retrieveSequence.nf
+  Script_a001663244224f7b: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/./modules/combineEpitopes.nf
+  Script_498fc0ef8ac9582b: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/./modules/designVaccineConstruct.nf
+Apr-10 22:47:46.812 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Apr-10 22:47:46.812 [main] DEBUG nextflow.Session - Session await
+Apr-10 22:47:46.864 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-10 22:47:46.865 [Task submitter] INFO  nextflow.Session - [c6/434eef] Submitted process > retrieveSequence (BAL61222.1)
+Apr-10 22:47:48.351 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: retrieveSequence (BAL61222.1); status: COMPLETED; exit: 0; error: -; workDir: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/work/c6/434eef64143e0baadf4eff5f52dcc3]
+Apr-10 22:47:48.352 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Apr-10 22:47:48.371 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Apr-10 22:47:48.374 [Actor Thread 6] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `bcell_method` -- Initialise it to a default value eg. `params.bcell_method = some_value`
+Apr-10 22:47:48.376 [Actor Thread 4] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `mhci_alleles` -- Initialise it to a default value eg. `params.mhci_alleles = some_value`
+Apr-10 22:47:48.376 [Actor Thread 5] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `mhcii_alleles` -- Initialise it to a default value eg. `params.mhcii_alleles = some_value`
+Apr-10 22:47:48.376 [Actor Thread 6] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `bcell_threshold` -- Initialise it to a default value eg. `params.bcell_threshold = some_value`
+Apr-10 22:47:48.377 [Actor Thread 4] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `mhci_method` -- Initialise it to a default value eg. `params.mhci_method = some_value`
+Apr-10 22:47:48.377 [Actor Thread 5] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `mhcii_method` -- Initialise it to a default value eg. `params.mhcii_method = some_value`
+Apr-10 22:47:48.377 [Actor Thread 4] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `mhci_threshold` -- Initialise it to a default value eg. `params.mhci_threshold = some_value`
+Apr-10 22:47:48.377 [Actor Thread 5] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `mhcii_threshold` -- Initialise it to a default value eg. `params.mhcii_threshold = some_value`
+Apr-10 22:47:48.396 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-10 22:47:48.396 [Task submitter] INFO  nextflow.Session - [70/f5f60c] Submitted process > predictBCellEpitopes (BAL61222.1_sequence)
+Apr-10 22:47:48.399 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-10 22:47:48.400 [Task submitter] INFO  nextflow.Session - [6c/eadcf1] Submitted process > predictTCellEpitopesI (BAL61222.1_sequence)
+Apr-10 22:47:48.838 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: predictTCellEpitopesI (BAL61222.1_sequence); status: COMPLETED; exit: 0; error: -; workDir: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/work/6c/eadcf1e0e1a85b629d6cad19a43c32]
+Apr-10 22:47:48.839 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: predictBCellEpitopes (BAL61222.1_sequence); status: COMPLETED; exit: 0; error: -; workDir: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/work/70/f5f60c743debeedcd7b6e5b4cc3ecd]
+Apr-10 22:47:48.841 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-10 22:47:48.841 [Task submitter] INFO  nextflow.Session - [e1/02abfd] Submitted process > predictTCellEpitopesII (BAL61222.1_sequence)
+Apr-10 22:47:49.055 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: predictTCellEpitopesII (BAL61222.1_sequence); status: COMPLETED; exit: 0; error: -; workDir: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/work/e1/02abfdc647b7fc6ec6715a5856851e]
+Apr-10 22:47:49.062 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-10 22:47:49.062 [Task submitter] INFO  nextflow.Session - [f9/9f46a1] Submitted process > combineEpitopes (combine_epitopes)
+Apr-10 22:47:49.314 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: combineEpitopes (combine_epitopes); status: COMPLETED; exit: 0; error: -; workDir: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/work/f9/9f46a159cf3b7ab6b61b9b24a1797b]
+Apr-10 22:47:49.319 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-10 22:47:49.319 [Task submitter] INFO  nextflow.Session - [6c/283f64] Submitted process > designVaccineConstruct (design_vaccine)
+Apr-10 22:47:49.484 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: designVaccineConstruct (design_vaccine); status: COMPLETED; exit: 0; error: -; workDir: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/work/6c/283f64ecea4179c391733a76980594]
+Apr-10 22:47:49.490 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-10 22:47:49.490 [Task submitter] INFO  nextflow.Session - [af/f2ee98] Submitted process > evaluateVaccineConstruct (evaluate_vaccine)
+Apr-10 22:47:49.703 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: evaluateVaccineConstruct (evaluate_vaccine); status: COMPLETED; exit: 0; error: -; workDir: /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/work/af/f2ee9852339db57e2ca14cfd7801ff]
+Apr-10 22:47:49.705 [main] DEBUG nextflow.Session - Session await > all processes finished
+Apr-10 22:47:49.804 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Apr-10 22:47:49.804 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Apr-10 22:47:49.806 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Apr-10 22:47:49.806 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Apr-10 22:47:49.808 [main] INFO  nextflow.Nextflow - 
+    Pipeline execution summary
+    ---------------------------
+    Completed at: 2025-04-10T22:47:49.806456-04:00
+    Duration    : 3.4s
+    Success     : true
+    workDir     : /Users/putriramadani/Documents/GitHub/nextflow-vaccine-design/work
+    exit status : 0
+    
+Apr-10 22:47:49.809 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=7; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=2.7s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=8 GB; ]
+Apr-10 22:47:49.820 [main] WARN  nextflow.dag.GraphvizRenderer - Graphviz is required to render the execution DAG in the given format -- See http://www.graphviz.org for more info.
+Apr-10 22:47:49.944 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Apr-10 22:47:49.951 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Apr-10 22:47:49.951 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

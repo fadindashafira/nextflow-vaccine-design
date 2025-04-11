@@ -1,0 +1,8 @@
+sequence,start,end,score,type,method,source
+KANPNNDLC,98,106,0.998,B-cell,Bepipred,BAL61222.1_sequence
+SWSDHEASS,137,145,0.997,B-cell,Bepipred,BAL61222.1_sequence
+NNTNQEDLL,181,189,0.996,B-cell,Bepipred,BAL61222.1_sequence
+QRESRRKKR,338,346,0.985,B-cell,Bepipred,BAL61222.1_sequence
+IGTSTLNQR,216,224,0.984,B-cell,Bepipred,BAL61222.1_sequence
+GNCNTKCQT,288,296,0.979,B-cell,Bepipred,BAL61222.1_sequence
+MVSLVKSDQ,10,18,0.964,B-cell,Bepipred,BAL61222.1_sequence
