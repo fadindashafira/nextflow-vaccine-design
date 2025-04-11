@@ -12,8 +12,11 @@ nextflow.enable.dsl = 2
 
 // Load modules
 include { retrieveSequence } from './modules/retrieveSequence'
-include { predictBCellEpitopes; predictTCellEpitopesI; predictTCellEpitopesII } from './modules/predictEpitopes'
-include { combineEpitopes; designVaccineConstruct } from './modules/designVaccine'
+include { predictBCellEpitopes } from './modules/predictEpitopes'
+include { predictTCellEpitopesI } from './modules/predictEpitopes'
+include { predictTCellEpitopesII } from './modules/predictEpitopes'
+include { combineEpitopes } from './modules/combineEpitopes'
+include { designVaccineConstruct } from './modules/designVaccineConstruct'
 include { evaluateVaccineConstruct } from './modules/evaluateVaccine'
 include { molecularDynamics } from './modules/molecularDynamics'
 
@@ -69,7 +72,7 @@ workflow {
     designVaccineConstruct(combineEpitopes.out.combined_epitopes)
     
     // Step 4: Evaluate vaccine
-    evaluateVaccineConstruct(designVaccineConstruct.out.vaccine)
+    evaluateVaccineConstruct(designVaccineConstruct.out.vaccine_construct)
     
     // Step 5: Molecular dynamics (optional)
     if (params.run_md) {

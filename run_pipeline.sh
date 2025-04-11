@@ -27,7 +27,7 @@ ACCESSION="BAL61222.1"
 OUTDIR="results"
 RUN_MD="false"
 TEST_MODE="false"
-GENERATE_DAG="false"
+GENERATE_DAG="true"
 RESUME_MODE="false"
 
 while [[ $# -gt 0 ]]; do
