@@ -21,7 +21,7 @@ include { evaluateVaccineConstruct } from './modules/evaluateVaccine'
 include { molecularDynamics } from './modules/molecularDynamics'
 
 // Load params from config
-params.accession = "BAL61222.1"
+params.accession = "BAL61230.1"
 params.outdir = "results"
 params.run_md = false
 params.help = false

@@ -73,18 +73,20 @@ retrieve_specific_sequence <- function(accession_number, output_file = NULL) {
   tryCatch({
     # First, check if the accession exists
     search_results <- entrez_search(db = "protein", term = accession_number)
-    
-    if (search_results$count == 0) {
+
+    if (is.null(search_results$ids) || length(search_results$ids) == 0) {
       log_message(paste("No sequence found for accession:", accession_number), is_error = TRUE)
       quit(status = 1)
     }
-    
+
+    # Use the first valid ID returned
     sequence_data <- entrez_fetch(
       db = "protein", 
-      id = accession_number, 
+      id = search_results$ids[1], 
       rettype = "fasta", 
       retmode = "text"
     )
+
     
     if (nchar(sequence_data) < 10) {
       log_message("Retrieved sequence is too short or empty. Check the accession number.", is_error = TRUE)

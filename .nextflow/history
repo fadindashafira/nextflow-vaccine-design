@@ -13,3 +13,9 @@
 2025-04-10 21:14:52	-	pedantic_bose	-	53ecbcc954735f15d6487b0d7a62ddd9	b4364d9f-6bd8-4c9f-b4d9-2a16a8124f94	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
 2025-04-10 21:15:01	-	boring_lumiere	-	53ecbcc954735f15d6487b0d7a62ddd9	0d3f2d50-7c97-4611-8d06-bbe2827750ff	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
 2025-04-10 22:49:24	3.3s	elegant_goldwasser	OK	d0a493763055295b6fad97d53d3fd5ef	a44a7349-a6c2-435e-9927-8fd39715d5ff	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false -with-dag results/pipeline_dag.dag
+2025-04-21 10:27:49	-	suspicious_yalow	-	231e7196cf363add7d1bd9cd393104e4	c72e04ed-8a3e-4f99-bf52-9a6b3f99d06b	nextflow run run_pipeline.sh
+2025-04-21 10:28:31	-	reverent_moriondo	-	f53d636b9d407e117f796819e7a02d7e	2bef38ec-a102-41f1-8a4d-43dc803271e7	nextflow run run_pipeline.sh
+2025-04-21 10:34:34	-	intergalactic_meninsky	-	f53d636b9d407e117f796819e7a02d7e	7bd8feb1-3e28-46a4-92a4-dfbcdb5e4255	nextflow run run_pipeline.sh
+2025-04-21 10:37:15	22.1s	thirsty_lagrange	OK	c6069fc8ddbb3ac28780a909662a0efc	1b0ecca0-c2b8-4a11-9d37-f2c6376e7ca5	nextflow run main.nf -profile standard --accession BAL61230.1 --outdir results --run_md false -with-dag results/pipeline_dag.dag
+2025-04-21 10:52:16	3.2s	mad_cray	ERR	c6069fc8ddbb3ac28780a909662a0efc	4d1b9d8e-15a6-4358-9e50-c0e51d14cf75	nextflow run main.nf -profile standard --accession BAL61230.1 --outdir results --run_md false -with-dag results/pipeline_dag.dag
+2025-04-21 11:01:44	3.6s	curious_rosalind	OK	c6069fc8ddbb3ac28780a909662a0efc	4d1b9d8e-15a6-4358-9e50-c0e51d14cf75	nextflow run main.nf -profile standard -resume -with-dag results/pipeline_dag.dag

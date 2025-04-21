@@ -1,0 +1,17 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Epitopes combined from multiple prediction methods.
+Total epitopes: 15 
+Epitope types:
+
+B-cell  MHC-I MHC-II 
+     7      5      3 
