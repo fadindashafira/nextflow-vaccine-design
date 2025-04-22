@@ -8,7 +8,7 @@ show_usage() {
     echo "Usage: ./run_pipeline.sh [OPTIONS]"
     echo ""
     echo "Options:"
-    echo "  -a, --accession ACCESSION   NCBI protein accession number (default: BAL61222.1)"
+    echo "  -a, --accession ACCESSION   NCBI protein accession number (default: BAL61230.1)"
     echo "  -o, --outdir DIRECTORY      Output directory (default: results)"
     echo "  -m, --run-md                Run molecular dynamics simulation (default: false)"
     echo "  -t, --test                  Run with test parameters"
@@ -19,15 +19,15 @@ show_usage() {
     echo "Examples:"
     echo "  ./run_pipeline.sh"
     echo "  ./run_pipeline.sh -a 'QHD43416.1' -o 'covid_results'"
-    echo "  ./run_pipeline.sh --accession 'BAL61222.1' --run-md --dag"
+    echo "  ./run_pipeline.sh --accession 'BAL61230.1' --run-md --dag"
 }
 
 # Parse command line arguments
-ACCESSION="BAL61222.1"
+ACCESSION="BAL61230.1"
 OUTDIR="results"
 RUN_MD="false"
 TEST_MODE="false"
-GENERATE_DAG="false"
+GENERATE_DAG="true"
 RESUME_MODE="false"
 
 while [[ $# -gt 0 ]]; do

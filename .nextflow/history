@@ -1,0 +1,21 @@
+2025-04-10 20:36:37	-	modest_faraday	-	78084eb8be1ebf25f4c1fa041be21c35	05347c26-4369-46a1-be83-1e1c6f42c4c8	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 20:50:04	-	irreverent_kimura	-	78084eb8be1ebf25f4c1fa041be21c35	3723aeed-f045-41ff-9057-407067beec0d	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 20:51:09	-	friendly_plateau	-	78084eb8be1ebf25f4c1fa041be21c35	bacd60a6-c26f-4c4e-869a-2214377ccfd1	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 20:55:37	-	cheeky_perlman	-	78084eb8be1ebf25f4c1fa041be21c35	965faf43-7bcb-45d8-9d00-ed2aa793c32f	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 20:56:29	-	compassionate_agnesi	-	390eb2e72fd7561866788c18bd0b8f8c	215533d6-6cc7-4ae6-b58e-8646ef1636aa	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 20:58:58	-	naughty_church	-	390eb2e72fd7561866788c18bd0b8f8c	a9549171-763e-4d32-a322-92834bf27fbc	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 20:59:46	-	focused_heisenberg	-	d650429f511f777a9a5ff8cf5923f2f7	b1050409-9513-4ce4-8078-2e95a838c753	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 21:00:50	-	determined_poitras	-	66e68ddf14eac910cbf34b54c696ebe9	b63a6397-a616-4399-bb95-6d845deadaea	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 21:08:43	-	grave_austin	-	66e68ddf14eac910cbf34b54c696ebe9	b6f535a6-a169-4814-9a0c-f0b6088258de	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 21:09:07	-	curious_payne	-	53ecbcc954735f15d6487b0d7a62ddd9	a17e29d3-3ef8-4e8b-97d7-f49271f5b761	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 21:12:37	-	amazing_mandelbrot	-	53ecbcc954735f15d6487b0d7a62ddd9	121501ce-2cbe-4ada-ba56-2c9a53671168	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 21:12:50	-	ridiculous_mahavira	-	53ecbcc954735f15d6487b0d7a62ddd9	3f1bb2c4-99dd-4019-91b5-8d757b268d7f	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 21:14:52	-	pedantic_bose	-	53ecbcc954735f15d6487b0d7a62ddd9	b4364d9f-6bd8-4c9f-b4d9-2a16a8124f94	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 21:15:01	-	boring_lumiere	-	53ecbcc954735f15d6487b0d7a62ddd9	0d3f2d50-7c97-4611-8d06-bbe2827750ff	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false
+2025-04-10 22:49:24	3.3s	elegant_goldwasser	OK	d0a493763055295b6fad97d53d3fd5ef	a44a7349-a6c2-435e-9927-8fd39715d5ff	nextflow run main.nf -profile standard --accession BAL61222.1 --outdir results --run_md false -with-dag results/pipeline_dag.dag
+2025-04-21 10:27:49	-	suspicious_yalow	-	231e7196cf363add7d1bd9cd393104e4	c72e04ed-8a3e-4f99-bf52-9a6b3f99d06b	nextflow run run_pipeline.sh
+2025-04-21 10:28:31	-	reverent_moriondo	-	f53d636b9d407e117f796819e7a02d7e	2bef38ec-a102-41f1-8a4d-43dc803271e7	nextflow run run_pipeline.sh
+2025-04-21 10:34:34	-	intergalactic_meninsky	-	f53d636b9d407e117f796819e7a02d7e	7bd8feb1-3e28-46a4-92a4-dfbcdb5e4255	nextflow run run_pipeline.sh
+2025-04-21 10:37:15	22.1s	thirsty_lagrange	OK	c6069fc8ddbb3ac28780a909662a0efc	1b0ecca0-c2b8-4a11-9d37-f2c6376e7ca5	nextflow run main.nf -profile standard --accession BAL61230.1 --outdir results --run_md false -with-dag results/pipeline_dag.dag
+2025-04-21 10:52:16	3.2s	mad_cray	ERR	c6069fc8ddbb3ac28780a909662a0efc	4d1b9d8e-15a6-4358-9e50-c0e51d14cf75	nextflow run main.nf -profile standard --accession BAL61230.1 --outdir results --run_md false -with-dag results/pipeline_dag.dag
+2025-04-21 11:01:44	3.6s	curious_rosalind	OK	c6069fc8ddbb3ac28780a909662a0efc	4d1b9d8e-15a6-4358-9e50-c0e51d14cf75	nextflow run main.nf -profile standard -resume -with-dag results/pipeline_dag.dag

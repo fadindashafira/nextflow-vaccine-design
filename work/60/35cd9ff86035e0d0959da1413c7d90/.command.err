@@ -1,0 +1,16 @@
+  WARNING: The scripts f2py and numpy-config are installed in '/Users/putriramadani/Library/Python/3.13/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+[notice] A new release of pip is available: 24.2 -> 25.0.1
+[notice] To update, run: pip3 install --upgrade pip
+Traceback (most recent call last):
+  File "/Users/putriramadani/Documents/GitHub/nextflow-vaccine-design 2/work/60/35cd9ff86035e0d0959da1413c7d90/.command.sh", line 8, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/putriramadani/Documents/GitHub/nextflow-vaccine-design 2/work/60/35cd9ff86035e0d0959da1413c7d90/.command.sh", line 14, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
